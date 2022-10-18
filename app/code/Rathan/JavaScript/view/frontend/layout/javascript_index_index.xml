@@ -1,0 +1,10 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" layout="1column">
+    <head>
+        <script src="Rathan_JavaScript::js/jsdemo.js"></script>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Rathan\JavaScript\Block\Javascript" name="javascript" template="Rathan_JavaScript::javascriptdemo.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

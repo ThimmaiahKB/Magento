@@ -1,0 +1,12 @@
+<h1><?php echo $this->getHelloWorldTxt(); ?></h1>
+<?php /** @var Thecoachsmb\Mymodule\Block\Article $block */ ?>
+<?php $articleCollection = $block->getCollection(); ?>
+<?php if (count($articleCollection)) { ?>
+      <h2><?= $block->escapeHtml(__('User Data')) ?></h2>
+      <?php foreach($articleCollection as $post): ?>
+           <h3><?= $block->escapeHtml(__('row - ')) ?>
+               <?php echo $post->getId();?>
+               <?php echo $post->getName(); ?>
+           </h3> 
+     <?php endforeach; ?> 
+<?php } ?> 

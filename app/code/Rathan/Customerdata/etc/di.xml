@@ -1,0 +1,4 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Rathan\Customerdata\Api\CustomerRepositoryInterface" type="Rathan\Customerdata\Model\CustomerRepository" />
+<preference for="Rathan\Customerdata\Api\Data\CustomerInterface" type="Rathan\Customerdata\Model\Customer" />
+</config>

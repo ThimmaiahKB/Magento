@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">grid_record_grid_addnew.grid_record_grid_addnew_data_source</item>
+            <item name="deps" xsi:type="string">grid_record_grid_addnew.grid_record_grid_addnew_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Sample Form</item>
+        <item name="layout" xsi:type="array">
+            <item name="type" xsi:type="string">tabs</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="save" xsi:type="string">Rathan\Grid\Block\Adminhtml\Grid\Edit\SaveButton</item>   
+            <item name="back" xsi:type="string">Rathan\Grid\Block\Adminhtml\Grid\Edit\BackButton</item> 
+        </item>
+    </argument>
+    
+
+    <dataSource name="grid_record_grid_addnew_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Rathan\Grid\Model\Contact\DataProvider</argument>
+            <argument name="name" xsi:type="string">grid_record_grid_addnew_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">     
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" xsi:type="url" path="*/*/savedata"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+
+    <fieldset name="addnew">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Insert New Record</item>
+            </item>
+        </argument>
+
+    
+        <field name="firstname" sortOrder="10" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <validation>
+                     <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+                <label translate="true">Firstname</label>
+            </settings>
+        </field>
+        <field name="lastname" sortOrder="20" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <validation>
+                     <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+                <label translate="true">Lastname</label>
+            </settings>
+        </field>
+        <field name="email" sortOrder="30" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <validation>
+                     <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+                <label translate="true">Email</label>
+            </settings>
+        </field>
+
+        <field name="phone" sortOrder="40" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <validation>
+                     <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+                <label translate="true">Phone</label>
+            </settings>
+        </field>
+
+    </fieldset>
+</form>

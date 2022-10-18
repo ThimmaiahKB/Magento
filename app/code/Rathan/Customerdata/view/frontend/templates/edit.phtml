@@ -1,0 +1,46 @@
+<?php
+    $customer = $block->getDataById();
+    
+?>
+<form class="" action="<?php echo $block->getSaveEdit(); ?>" id="rathan-customerdata-form" method="POST">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><h2 class="bold">Provide Customer Details</h2></span></legend><br>
+        <div class="field note no-label"></div>
+        <div>
+                     <label>ID</label>
+                              <input name="id" type="text" value="<?php echo $customer->getId(); ?>" readonly/>
+                          </div>
+        <div class="field firstname">
+            <label class="label" for="firstname"><span>First name</span></label>
+            <div class="control">
+                <input name="firstname" id="firstname" title="firstname" value="<?php echo $customer->getFirstname(); ?>" class="input-text" type="text" >
+            </div>
+        </div>
+        <div class="field firstname">
+            <label class="label" for="lastname"><span>Last name</span></label>
+            <div class="control">
+                <input name="lastname" id="lastname" title="lastname" value="<?php echo $customer->getLastname(); ?>" class="input-text" type="text">
+            </div>
+        </div>
+        <div class="field email">
+            <label class="label" for="lastname"><span>email</span></label>
+            <div class="control">
+                <input name="email" id="email" title="email" value="<?php echo $customer->getEmail(); ?>" class="input-email" type="email">
+            </div>
+        </div>
+        <div class="field phone">
+            <label class="label" for="phone"><span>phone</span></label>
+            <div class="control">
+                <input name="phone" id="phone" title="phone" value="<?php echo $customer->getPhone(); ?>" class="input-phone" type="number">
+            </div>
+        </div>
+        
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Edit</span>
+            </button>
+        </div>
+    </div>
+</form>

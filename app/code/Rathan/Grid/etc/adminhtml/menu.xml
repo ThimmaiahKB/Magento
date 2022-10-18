@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Rathan_Grid::codilar" title="Codilar" translate="main" module="Rathan_Grid" sortOrder="50" resource="Rathan_Grid::codilar" />
+        <add id="Rathan_Grid::customer_data" title="customer_Data" translate="content" module="Rathan_Grid" parent="Rathan_Grid::codilar" sortOrder="10" dependsOnModule="Rathan_Grid" action="grid/grid" resource="Rathan_Grid::customer_data"/>
+    </menu>
+</config>
